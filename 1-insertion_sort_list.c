@@ -7,10 +7,30 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	size_t isSorted = 1, i = 0, j = 0, temp;
+	listint_t *t;
+	int n;
 
-	if (!list || !*list || !*list->next)
+	if (!list)
 		return;
-
+	t = *list;
+	while (t)
+	{
+		while (t)
+		{
+			if (t->next)
+			{
+				if (t->n > t->next->n)
+				{
+					n = t->n;
+					*(int *)&t->n = t->next->n;
+					*(int *)&t->next->n = n;
+					t = *list;
+					print_list(*list);
+					break;
+				}
+			}
+			t = t->next;
+		}
+	}
 }
 
