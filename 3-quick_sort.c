@@ -54,12 +54,13 @@ int part(int *array, int lo, int hi, size_t size)
 }
 
 /**
- * s - quick sort
- * @array: given array
- * @lo: lower
- * @hi:higher
- * @size: array's size
+ * s - array qucik sort
+ * @array: array of integer
+ * @lo: lower of value
+ * @hi:higher of value
+ * @size: the sizeof array of integer
  * Return: void
+ *
  */
 void s(int *array, int lo, int hi, size_t size)
 {
