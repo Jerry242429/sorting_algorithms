@@ -27,18 +27,18 @@ void quick_sort(int *array, size_t size)
 int part(int *array, int lo, int hi, size_t size)
 {
 	int a = lo - 1, b = lo;
-	int pivot = array[hi], aux = 0;
+	int p = array[hi], ux = 0;
 
 	for (; b < hi; b++)
 	{
-		if (array[b] < pivot)
+		if (array[b] < p)
 		{
 			a++;
 			if (array[a] != array[b])
 			{
-				aux = array[a];
+				ux = array[a];
 				array[a] = array[b];
-				array[b] = aux;
+				array[b] = ux;
 				print_array(array, size);
 			}
 		}
@@ -47,7 +47,7 @@ int part(int *array, int lo, int hi, size_t size)
 	{
 		aux = array[a + 1];
 		array[a + 1] = array[hi];
-		array[hi] = aux;
+		array[hi] = ux;
 		print_array(array, size);
 	}
 	return (a + 1);
