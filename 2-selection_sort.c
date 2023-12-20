@@ -26,7 +26,7 @@ void selection_sort(int *array, size_t size)
 		}
 		if (p != k)
 		{
-			aux = array[k];
+			a = array[k];
 			array[k] = array[p];
 			array[p] = a;
 			print_array(array, size);
