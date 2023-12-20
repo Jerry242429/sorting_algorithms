@@ -45,7 +45,7 @@ int part(int *array, int lo, int hi, size_t size)
 	}
 	if (array[a + 1] != array[hi])
 	{
-		aux = array[a + 1];
+		ux = array[a + 1];
 		array[a + 1] = array[hi];
 		array[hi] = ux;
 		print_array(array, size);
