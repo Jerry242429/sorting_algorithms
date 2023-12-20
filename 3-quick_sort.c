@@ -16,7 +16,7 @@ void quick_sort(int *array, size_t size)
 }
 
 /**
- * partition - split the array to lower and higher
+ * part - split the array to lower and higher
  * @array: array of integer
  * @lo: lower value
  * @hi: higher value
